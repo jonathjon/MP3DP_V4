@@ -67,3 +67,20 @@ managed_services = klipper
 primary_branch = main
 install_script = install.sh
 
+[update_manager moonraker-obico]
+type = git_repo
+path = /home/pi/moonraker-obico
+origin = https://github.com/TheSpaghettiDetective/moonraker-obico.git
+env = /home/pi/moonraker-obico/../moonraker-obico-env/bin/python
+requirements = requirements.txt
+install_script = install.sh
+managed_services = 
+	moonraker-obico
+
+[update_manager client V1Theme]
+type = git_repo
+path = ~/Mainsail_Theme
+origin = https://github.com/V1EngineeringInc/Mainsail_Theme.git
+install_script = install.sh
+is_system_service = False
+
