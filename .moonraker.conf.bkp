@@ -84,3 +84,16 @@ origin = https://github.com/V1EngineeringInc/Mainsail_Theme.git
 install_script = install.sh
 is_system_service = False
 
+[spoolman]
+server = http://192.168.68.98:7912
+sync_rate = 5
+
+[update_manager KlipperScreen]
+type = git_repo
+path = ~/KlipperScreen
+origin = https://github.com/KlipperScreen/KlipperScreen.git
+env = ~/.KlipperScreen-env/bin/python
+requirements = scripts/KlipperScreen-requirements.txt
+install_script = scripts/KlipperScreen-install.sh
+managed_services = KlipperScreen
+
